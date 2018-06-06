@@ -1,0 +1,25 @@
+<% include partials/header %>
+
+<div class="container">
+    <header class="jumbotron">
+	 <div class="container">
+	     <h3>Welcome to YelpCamp</h3>
+	     <p>View our hand-picked campgrounds from all over the world</p>
+	     <p ><a class="btn btn-primary btn-lg"   href="/campgrounds/new">Add new campground</a></p>
+	 </div>
+    </header>
+    
+    <div class="row" style="display:flex; frex-wrap:wrap;"> <!--pentru a nu avea dimensiuni diferite pt fiecare casuta-->
+        <% campgrounds.forEach(function(campground){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">  <!-- o incadreaza intr-un border -->
+                   <img src="<%= campground.image %>">
+                   <div class="caption"> <!--adauga in chenar sub elementul tata -->
+                       <h4><%= campground.name %></h4>
+                   </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+<% include partials/footer %>  

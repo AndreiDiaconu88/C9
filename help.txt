@@ -1,0 +1,18 @@
+Inainte de a instala mongodb: sudo apt-get install -y mongodb-org
+
+
+Daca uit serverul mongo deschis o sa am crash, ca sa repar: 
+ cd ~
+./mongod --repair
+
+
++++ daca nu merge:
+
+cd ~/data
+rm mongod.lock
+./mongod
+
+
+// mongoose
+
+mongoose.connect("mongodb://localhost/yelp_camp", {useMongoClient: true});
